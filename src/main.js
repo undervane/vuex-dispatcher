@@ -1,8 +1,11 @@
-import Vue from 'vue'
-import App from './App.vue'
+import { Dispatch } from "./types";
 
-Vue.config.productionTip = false
+export default {
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  install(Vue) {
+    Vue.prototype.$dispatcher = function (action) {
+      return new Dispatch(action, this.$store);
+    }
+  }
+
+}

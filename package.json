@@ -4,13 +4,15 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vuex-dispatcher src/main.js --dest lib/",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^2.6.5",
     "vue": "^2.6.10"
   },
+  "main": "lib/vuex-dispatcher.common.js",
+  "unpkg": "lib/vuex-dispatcher.umd.min.js",
+  "jsdelivr": "lib/vuex-dispatcher.umd.min.js",
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.7.0",
     "@vue/cli-plugin-eslint": "^3.7.0",
