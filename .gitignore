@@ -3,6 +3,7 @@ node_modules
 /dist
 /lib
 vuex-dispatcher-*.tgz
+docs/.vuepress/dist
 
 # local env files
 .env.local
