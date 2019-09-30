@@ -1,10 +1,15 @@
 ---
 home: true
 heroImage: #
-actionText: Get Started →
-actionLink: /basics/
+actionText: Quick Setup →
+actionLink: /getting-started/
 footer: MIT Licensed | Copyright © 2019 Undervane
 ---
+
+``` bash
+npm install vuex-dispatcher
+# OR: yarn add vuex-dispatcher 
+```
 
 <div class="features">
   <div class="feature">
@@ -20,10 +25,3 @@ footer: MIT Licensed | Copyright © 2019 Undervane
     <p>You will be able to pass on your own payload options to be able to maximize your developer experience using the library (coming soon)</p>
   </div>
 </div>
-
-### Quick setup
-
-``` bash
-npm install vuex-dispatcher
-# OR: yarn add vuex-dispatcher 
-```
