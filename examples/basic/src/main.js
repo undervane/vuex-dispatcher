@@ -6,7 +6,7 @@ Vue.config.productionTip = false
 
 // Dispatcher
 import Dispatcher from 'vuex-dispatcher'
-Vue.use(Dispatcher);
+Vue.use(Dispatcher, store);
 
 new Vue({
   store,
