@@ -2,7 +2,7 @@ import { PaginationOptions } from "./pagination-options.type";
 import { isNil } from "../utils";
 import { LoadOptions } from "./load-options.type";
 
-class Dispatch {
+export class Dispatch {
   action;
   payload = new LoadOptions();
 

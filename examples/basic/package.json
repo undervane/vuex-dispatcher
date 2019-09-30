@@ -10,7 +10,7 @@
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
     "vuex": "^3.0.1",
-    "vuex-dispatcher": "^1.0.3"
+    "vuex-dispatcher": "^1.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
