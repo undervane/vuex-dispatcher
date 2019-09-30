@@ -3,11 +3,17 @@
   "version": "1.0.3",
   "private": false,
   "scripts": {
+    "---VUE---": "",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name vuex-dispatcher src/main.js --dest lib/",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "---VUEPRESS---": "",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "---ZEIT-NOW---": "",
+    "now-build": "npm run docs:build && mv docs/.vuepress/dist dist"
   },
-  "dependencies": {
+  "peerDependencies": {
     "vue": "^2.6.10"
   },
   "main": "lib/vuex-dispatcher.common.js",
@@ -20,6 +26,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.5.21",
+    "vuepress": "^0.14.11"
   }
 }

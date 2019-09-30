@@ -2,8 +2,7 @@ import { PaginationOptions } from "./pagination-options.type";
 import { isNil } from "../utils";
 import { LoadOptions } from "./load-options.type";
 
-export class Dispatch {
-
+class Dispatch {
   action;
   payload = new LoadOptions();
 
@@ -35,6 +34,19 @@ Dispatch.prototype.pagination = function (options) {
   return this;
 };
 
+Dispatch.prototype.pagination = function (paginationModel, options) {
+
+  const pagination = new paginationModel();
+  this.payload["pagination"] = { ...pagination, ...options };
+
+  return this;
+};
+
+Dispatch.prototype.loading = function (callback) {
+  this.payload.loading = callback;
+  return this;
+}
+
 Dispatch.prototype.error = function (callback) {
   this.payload["error"] = callback;
   return this;
@@ -50,6 +62,25 @@ Dispatch.prototype.persist = function () {
   return this;
 };
 
-Dispatch.prototype.execute = function () {
-  return this.$store.dispatch(this.action, this.payload);
+Dispatch.prototype.execute = function (callback) {
+  return new Promise(async (resolve, reject) => {
+
+    this.payload["loading"](true);
+
+    try {
+      const data = await this.$store.dispatch(this.action, this.payload);
+
+      if (callback) {
+        callback(data);
+      }
+
+      resolve(data);
+    }
+    catch (e) {
+      reject(e);
+    }
+
+    this.payload["loading"](false);
+  });
+
 };

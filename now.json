@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "@vuex/dispatcher",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build"
+    }
+  ]
+}
