@@ -17,7 +17,7 @@ Then import it to your `main.js` and install the plugin
 
 ```js
 // Dispatcher
-import Dispatcher from './addons/dispatcher'
+import Dispatcher from 'vuex-dispatcher'
 Vue.use(Dispatcher);
 ```
 
