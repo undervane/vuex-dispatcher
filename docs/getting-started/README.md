@@ -13,12 +13,12 @@ npm install vuex-dispatcher
 # OR: yarn add vuex-dispatcher 
 ```
 
-Then import it to your `main.js` and install the plugin
+Then import it to your `main.js` and install the plugin. Remember to pass the store instance.
 
 ```js
 // Dispatcher
 import Dispatcher from 'vuex-dispatcher'
-Vue.use(Dispatcher);
+Vue.use(Dispatcher, store);
 ```
 
 ::: tip
