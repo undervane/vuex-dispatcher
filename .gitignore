@@ -4,6 +4,7 @@ node_modules
 /lib
 vuex-dispatcher-*.tgz
 docs/.vuepress/dist
+/coverage
 
 # local env files
 .env.local

@@ -2,6 +2,11 @@
 
 An easy to use payload builder for your Vuex dispatch actions.
 
+[![Current Release](https://img.shields.io/github/v/release/undervane/vuex-dispatcher.svg?style=flat-square)](https://vuex-dispatcher.now.sh/)
+[![License](https://img.shields.io/github/license/undervane/vuex-dispatcher.svg?style=flat-square)](https://github.com/undervane/vuex-dispatcher/blob/master/LICENSE)
+[![Dependency status](https://img.shields.io/david/undervane/vuex-dispatcher.svg?style=flat-square)](https://david-dm.org/undervane/vuex-dispatcher)
+![Code coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
+
 ## Getting Started
 
 This library helps you **maintain a consistent action dispatch payload object** while helping you **speed up the process** at the same time. Throught the following sections we'll **explore all of the capabilities** and give you **guidance** to **make the best** from this library.
@@ -29,3 +34,17 @@ Vue.use(Dispatcher, store);
 🌈 **You are ready to go!** Now you can use Vuex Dispatcher from across your app!
 
 Find more information and example usage in the official docs here: https://vuex-dispatcher.now.sh
+
+## Tests
+
+Run tests for this project with command below:
+
+```bash
+npm run test:unit
+```
+
+Coverage information will be generated, to live preview while you are testing just run command below:
+
+```bash
+npm run coverage-server
+```

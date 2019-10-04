@@ -1,3 +1,10 @@
+examples/
+now.json
+tsconfig.json
+postcss.config.js
+babel.config.js
+.eslintrc.js
+.browserslistrc
 .DS_Store
 public/
 docs/
