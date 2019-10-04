@@ -56,7 +56,7 @@ export class Dispatcher<T = unknown> {
     return this;
   };
 
-  execute(callback: (data: unknown) => void): Promise<unknown> {
+  execute(callback?: (data: unknown) => void): Promise<unknown> {
     return new Promise(async (resolve, reject) => {
 
       this.payload.loading(true);

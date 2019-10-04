@@ -13,7 +13,8 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "webpack-env"
+      "webpack-env",
+      "jest"
     ],
     "paths": {
       "@/*": [
@@ -37,6 +38,7 @@
   ],
   "exclude": [
     "node_modules",
-    "examples"
+    "examples",
+    "tests"
   ]
 }
