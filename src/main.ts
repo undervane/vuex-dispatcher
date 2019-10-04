@@ -5,7 +5,7 @@ import Vue, { VueConstructor } from "vue";
 export default {
 
   install(Vue: VueConstructor, store: Store<any>) {
-    Vue.prototype.$dispatcher = function (action: string) {
+    Vue.prototype.$dispatcher = function (action: string): Dispatcher<any> {
 
       if (!store) {
         throw Error('You need to provide store instance to Vuex Dispatch, eg: Vue.use(Dispatcher, store <-- PASS HERE);');
@@ -19,6 +19,6 @@ export default {
 
 declare module "vue/types/vue" {
   interface Vue {
-    $dispatcher: Dispatcher<any>;
+    $dispatcher(action: string): Dispatcher<any>;
   }
 }
