@@ -186,7 +186,7 @@ const filterOptions = {
 
 const items = 
   await this.$dispatcher("getItems")
-    .filter(ItemsFilter, filterOptions).execute();
+    .filter(filterOptions, ItemsFilter).execute();
 ```
 
 Generated payload:
@@ -265,7 +265,7 @@ let pagination = {
 
 const items = 
   await this.$dispatcher("getItems")
-    .pagination(PaginationModel, pagination).execute();
+    .pagination(pagination, PaginationModel).execute();
 ```
 
 ## Error Callback
