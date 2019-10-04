@@ -34,7 +34,7 @@ export class Dispatcher<T = unknown> {
     this.payload.pagination = { ...pagination, ...options };
 
     return this;
-  };
+  }
 
   loading(callback: (status: boolean) => void): Dispatcher<T> {
     this.payload.loading = callback;
@@ -49,12 +49,12 @@ export class Dispatcher<T = unknown> {
   force(): Dispatcher<T> {
     this.payload.force = true;
     return this;
-  };
+  }
 
   persist(): Dispatcher<T> {
     this.payload.persist = true;
     return this;
-  };
+  }
 
   execute(callback?: (data: unknown) => void): Promise<unknown> {
     return new Promise(async (resolve, reject) => {

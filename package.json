@@ -34,6 +34,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "husky": "^3.0.8",
     "ts-jest": "^23.0.0",
     "typescript": "^3.2.1",
     "vue-cli-plugin-typescript": "0.0.1",
@@ -44,5 +45,11 @@
   "peerDependencies": {
     "vue": "^2.6.10",
     "vuex": "^3.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test:unit"
+    }
   }
 }
