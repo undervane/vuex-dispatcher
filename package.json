@@ -3,18 +3,19 @@
   "version": "1.1.1",
   "private": false,
   "scripts": {
+    "---APP---": "",
+    "build": "npm run vue:build && npm run ts-declaration",
     "---VUE---": "",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vuex-dispatcher src/main.js --dest lib/",
+    "vue:build": "vue-cli-service build --target lib --name vuex-dispatcher src/main.ts --dest lib/",
     "lint": "vue-cli-service lint",
+    "---TYPESCRIPT---": "",
+    "ts-declaration": "tsc --emitDeclarationOnly",
     "---VUEPRESS---": "",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "---ZEIT-NOW---": "",
     "now-build": "npm run docs:build && mv docs/.vuepress/dist dist"
-  },
-  "peerDependencies": {
-    "vue": "^2.6.10"
   },
   "main": "lib/vuex-dispatcher.common.js",
   "unpkg": "lib/vuex-dispatcher.umd.min.js",
@@ -23,10 +24,18 @@
     "@vue/cli-plugin-babel": "^3.7.0",
     "@vue/cli-plugin-eslint": "^3.7.0",
     "@vue/cli-service": "^3.7.0",
+    "@vue/eslint-config-typescript": "^4.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "typescript": "^3.2.1",
+    "vue-cli-plugin-typescript": "0.0.1",
     "vue-template-compiler": "^2.5.21",
-    "vuepress": "^0.14.11"
+    "vuepress": "^0.14.11",
+    "vuex": "^3.1.1"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.10",
+    "vuex": "^3.1.1"
   }
 }
