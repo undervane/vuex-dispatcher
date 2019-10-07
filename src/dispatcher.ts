@@ -56,17 +56,22 @@ export class Dispatcher<T = unknown> {
     return this;
   }
 
-  execute(callback?: (data: unknown) => void): Promise<unknown> {
+  data<Y>(data: Y): Dispatcher<T> {
+    this.payload.data = data
+    return this;
+  }
+
+  execute<Y = any>(callback?: (data: Y) => void): Promise<Y> {
     return new Promise(async (resolve, reject) => {
 
       this.payload.loading(true);
 
       this.$store.dispatch(this.action, this.payload)
-        .then((data: unknown) => {
+        .then(data => {
           callback && callback(data);
           resolve(data);
         })
-        .catch((error: unknown) => reject(error))
+        .catch(error => reject(error))
         .finally(() => this.payload.loading(false));
 
     });

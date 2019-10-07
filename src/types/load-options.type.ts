@@ -4,6 +4,7 @@ export class LoadOptions {
   persist: boolean;
   filters: any;
   pagination: any;
+  data: any;
 
   loading: (status: boolean) => void;
   error = (error: string) => console.error('Missing error handling, thrown error: ' + error)
